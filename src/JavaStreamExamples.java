@@ -19,6 +19,9 @@ public class JavaStreamExamples
 		Optional<Integer> reduce = integers.stream().reduce((s, s2) -> s * s2);
 		reduce.ifPresent(System.out::println);
 	}
+	public void testIntRange(){
+
+	}
 	public  void testGroupBy(){
 		List<String> countryName=Arrays.asList("India","USA","USA","India");
 		Map<String, Long> collect = countryName.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
